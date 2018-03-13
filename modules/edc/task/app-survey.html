@@ -6,17 +6,18 @@
 			<img src="__CURRENT_PATH__/home.html.woolcock.gif" class="" alt="Woolcock Intitute of Medical Research"style="width:300px"><br><br>
 		</div>
 		<section id=form_container__ID>
-		    <div id=header__ID>
-				The Sleep App Survey
-			</div>
-			<div class="container">
-				<div class="row row__ID">
-					<div class="col-sm control-group">
-						<span id=quest__ID>We’re working to create a mobile App to improve people’s sleep. This survey will help us understand more about what would be relevant and helpful to the people who would use the App.</span>
+			<form id=F__ID>
+			    <div id=header__ID>
+					The Sleep App Survey
+				</div>
+				<div class="container">
+					<div class="row row__ID">
+						<div class="col-sm control-group">
+							<span id=quest__ID>We’re working to create a mobile App to improve people’s sleep. This survey will help us understand more about what would be relevant and helpful to the people who would use the App.</span>
+						</div>
 					</div>
 				</div>
-			</div>
-		    <form id=F__ID>
+				<hr style='border-top:1px solid #000;margin:0'></hr>
 		        <div class="container">
 		            <div class="row row__ID">
 		                <div class="col-sm" >
@@ -34,10 +35,82 @@
 							<input class="form-control" type="text" name="DOB" id=DOB__ID placeholder="DD/MM/YYYY" required >
 		                </div>
 		            </div>
-		            <div class="row row__ID">
+					<hr style='border-top:1px solid #000;margin:0'></hr>
+					<div id=header__ID>
+						About your phone
+					</div>
+					<div class="row row__ID">
+		                <div class="col-sm-8 control-group" style="max-width:550px">
+		                    <span id=quest__ID>3.	How often do you use a smartphone?</span><br><i>(eg. iPhone, Samsung Galaxy or other touch screen mobile phone)</i>
+		                </div>
+		                <div class="col-sm-4 control-group"style="max-width:250px">
+		                    <label class="control control-radio"  style="width:200px">
+		                        <input type="radio"  name="smartphone_use" id="smartphone_use__ID"  required value='Never' />
+		                        <div class="control_indicator text-center"></div>
+		                        Never
+		                    </label>
+		                    <label class="control control-radio"  style="width:200px">
+		                            <input type="radio"  name="smartphone_use"  value='Dialy' />
+		                        <div class="control_indicator  text-center"></div>
+		                        Dialy
+		                    </label>
+		                    <label class="control control-radio"  style="width:200px">
+		                        <input type="radio"  name="smartphone_use"   value='Weekly' />
+		                        <div class="control_indicator text-center"></div>
+		                        Weekly
+		                    </label>
+		                    <label class="control control-radio"  style="width:200px">
+		                        <input type="radio"  name="smartphone_use"   value='Less ofthen than weekly' />
+		                        <div class="control_indicator text-center"></div>
+		                        Less ofthen than weekly
+		                    </label>
+		                </div>
+		            </div>
+					<div  class="row row__ID">
 		                <div class="col-sm">
-		                    Residential Address
-		                        <textarea class="form-control"  name="Residential_Address" id="Residential_Address__ID" placeholder="Residential Address" required ></textarea>
+		                    <span>4.	What type of phone do you use?</span><br><i>(eg. iPhone 5, HTC One, Samsung Galaxy 4, etc.)</i>
+		                </div>
+		                <div class="col-sm">
+							<input class="form-control" type="text" name="smartphone" id=smartphone__ID placeholder="Phone Type" required >
+		                </div>
+		            </div>
+					<hr style='border-top:1px solid #000;margin:0'></hr>
+					<div id=header__ID>
+						Your sleep context
+					</div>
+					<div class="row row__ID">
+		                <div class="col-sm-8 control-group" style="max-width:550px">
+		                    <span id=quest__ID>1.	How often do you keep your phone by your bed at night?</span>
+		                </div>
+		                <div class="col-sm-4 control-group"style="max-width:250px">
+		                    <label class="control control-radio"  style="width:200px">
+		                        <input type="radio"  name="smartphone_use" id="smartphone_use__ID"  required value='Almost always' />
+		                        <div class="control_indicator text-center"></div>
+		                        Almost always
+		                    </label>
+		                    <label class="control control-radio"  style="width:200px">
+		                            <input type="radio"  name="smartphone_use"  value='Sometimes' />
+		                        <div class="control_indicator  text-center"></div>
+		                        Sometimes
+		                    </label>
+		                    <label class="control control-radio"  style="width:200px">
+		                        <input type="radio"  name="smartphone_use"   value='Occasionally' />
+		                        <div class="control_indicator text-center"></div>
+		                        Occasionally
+		                    </label>
+		                    <label class="control control-radio"  style="width:200px">
+		                        <input type="radio"  name="smartphone_use"   value='Never' />
+		                        <div class="control_indicator text-center"></div>
+		                        Never
+		                    </label>
+		                </div>
+		            </div>
+					<div  class="row row__ID">
+		                <div class="col-sm">
+		                    <span>4.	What type of phone do you use?</span><br><i>(eg. iPhone 5, HTC One, Samsung Galaxy 4, etc.)</i>
+		                </div>
+		                <div class="col-sm">
+							<input class="form-control" type="text" name="smartphone" id=smartphone__ID placeholder="Phone Type" required >
 		                </div>
 		            </div>
 		            <div  class="row row__ID">
