@@ -1,0 +1,8 @@
+{
+	"modules":
+	{
+		"registration":	{"table_id":"91000083","url":"edc/modules/registration.html"},
+        "thanks-ok":	{"url":"edc/modules/thanks-ok.html"},
+        "thanks-no":	{"url":"edc/modules/thanks-no.html"}
+	}
+}

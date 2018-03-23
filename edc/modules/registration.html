@@ -1,0 +1,345 @@
+<div id=page__ID>
+	<div id=panel__ID class="container-fluid" style='max-width:1000px'>
+		<div class="text-center">
+		<img src="__CURRENT_PATH__/registration.html.crc.png" class="" alt="CRC Alertness Safety and Productivity" style="width:250px">&nbsp;&nbsp;&nbsp;&nbsp;
+		<img src="__CURRENT_PATH__/registration.html.usyd_new_logo.png" class="" alt="Sydney University" style="width:150px">&nbsp;&nbsp;&nbsp;&nbsp;
+		<img src="__CURRENT_PATH__/registration.html.woolcock.gif" class="" alt="Woolcock Intitute of Medical Research"style="width:300px"><br><br>
+	</div>
+        <form id=F_01__ID>
+			VmInclude:__CURRENT_PATH__/registration.html.isi.html
+			<button type="submit" class="btn btn-secondary">Next</button>
+			<br><br>
+        </form>
+        <form id=F_02__ID>
+			VmInclude:__CURRENT_PATH__/registration.html.psqi.html
+			<br>
+			<button type="button" id=f2_p__ID class="btn btn-secondary">Previous</button>
+			<button type="submit" class="btn btn-secondary">Next</button>
+			<br><br>
+		</form>
+        <form id=F_03__ID>
+			VmInclude:__CURRENT_PATH__/registration.html.participant.html
+			<br>
+			<button type="button" id=f3_p__ID class="btn btn-secondary">Previous</button>
+			<button type="submit" class="btn btn-secondary">Next</button>
+			<br><br>
+		</form>
+		<form id=F_04__ID>
+			VmInclude:__CURRENT_PATH__/registration.html.consent.html
+			<br>
+			<button type="button" id=f4_p__ID class="btn btn-secondary">Previous</button>
+			<button type="submit" class="btn btn-secondary">Next</button>
+			<br><br>
+		</form>
+		<form id=F_05__ID>
+			VmInclude:__CURRENT_PATH__/registration.html.app-survey.html
+			<br>
+			<button type="button" id=f5_p__ID class="btn btn-secondary">Previous</button>
+			<button type="submit" class="btn btn-secondary">Next</button>
+			<br><br>
+		</form>
+		<form id=F_06__ID>
+			VmInclude:__CURRENT_PATH__/registration.html.thanks-ok.html
+			<br><br>
+		</form>
+		<form id=F_07__ID>
+			VmInclude:__CURRENT_PATH__/registration.html.thanks-no.html
+		</form>
+	</div>
+</div>
+<script>
+    function F__ID(){
+        //----------------------------------------
+        var prefix=$vm.module_list[$vm.vm['__ID'].name].prefix; if(prefix==undefined) prefix="";
+		//----------------------------------------
+		var hide_all=function(){
+			$('#F_01__ID').hide();
+            $('#F_02__ID').hide();
+            $('#F_03__ID').hide();
+			$('#F_04__ID').hide();
+			$('#F_05__ID').hide();
+			$('#F_06__ID').hide();
+			$('#F_07__ID').hide();
+		}
+		//----------------------------------------
+        $('#D__ID').on('load',function(){
+			//$('#page__ID input').attr('required',false);
+			//$('#page__ID select').attr('required',false);
+			$('#F_01__ID')[0].reset();
+			$('#F_02__ID')[0].reset();
+			$('#F_03__ID')[0].reset();
+			$('#F_04__ID')[0].reset();
+			$('#F_05__ID')[0].reset();
+			$('#F_06__ID')[0].reset();
+			$('#F_07__ID')[0].reset();
+			psqi_onload__ID();
+			hide_all(); $('#F_01__ID').show();
+        })
+        //-------------------------------------
+        $('#F_01__ID').submit(		function(event){	event.preventDefault();	hide_all(); $('#F_02__ID').show();})
+		//-------------------------------------
+        $('#f2_p__ID').on('click',	function(event){	event.preventDefault();	hide_all(); $('#F_01__ID').show();	})
+        $('#F_02__ID').submit(		function(event){	event.preventDefault();	hide_all();
+			var record={};
+			var a=$("#F_02__ID").serializeArray(); $.each(a, function () { record[this.name]=this.value || '';});
+			calculation(record);
+			if(record.Include=='No') $('#F_03__ID').show();
+			else submit_record_no();
+		})
+        //--------------------------------------------------------
+		var submit_record_no=function(){
+			var record={};
+            var a=$("#F_01__ID").serializeArray(); $.each(a, function () { record[this.name]=this.value || '';});
+            a=$("#F_02__ID").serializeArray(); $.each(a, function () { record[this.name]=this.value || '';});
+			calculation(record);
+			//-------------
+            var dbv={}
+            var db_pid=$vm.module_list[$vm.vm["__ID"].name].table_id;
+			var req={cmd:"add_json_record_anonymous",db_pid:db_pid,data:record,dbv:dbv};
+            $VmAPI.request({data:req,callback:function(res){
+                if(res.ret<=0)	$vm.alert("Sorry there is a problem. You can try again later.")
+                else{
+					$('#F_07__ID').show();
+                }
+            }});
+			//-------------
+		}
+		//--------------------------------------------------------
+		$('#f3_p__ID').on('click',	function(event){	event.preventDefault();	hide_all(); $('#F_02__ID').show();	})
+		$('#F_03__ID').submit(		function(event){	event.preventDefault();	hide_all(); $('#F_04__ID').show();})
+		//--------------------------------------------------------
+		$('#f4_p__ID').on('click',	function(event){	event.preventDefault();	hide_all(); $('#F_03__ID').show();	})
+		$('#F_04__ID').submit(		function(event){	event.preventDefault();	hide_all(); $('#F_05__ID').show();})
+		//--------------------------------------------------------
+		$('#f5_p__ID').on('click',	function(event){	event.preventDefault();	hide_all(); $('#F_04__ID').show();	})
+		$('#F_05__ID').submit(		function(event){	event.preventDefault();	hide_all(); submit_record_ok();})
+		//--------------------------------------------------------
+		var submit_record_ok=function(){
+			var record={};
+            var a=$("#F_01__ID").serializeArray(); $.each(a, function () { record[this.name]=this.value || '';});
+            a=$("#F_02__ID").serializeArray(); $.each(a, function () { record[this.name]=this.value || '';});
+			a=$("#F_03__ID").serializeArray(); $.each(a, function () { record[this.name]=this.value || '';});
+			a=$("#F_04__ID").serializeArray(); $.each(a, function () { record[this.name]=this.value || '';});
+			a=$("#F_05__ID").serializeArray(); $.each(a, function () { record[this.name]=this.value || '';});
+			calculation(record);
+			//-------------
+            var dbv={}
+            var db_pid=$vm.module_list[$vm.vm["__ID"].name].table_id;
+			var req={cmd:"add_json_record_anonymous",db_pid:db_pid,data:record,dbv:dbv};
+            $VmAPI.request({data:req,callback:function(res){
+                if(res.ret<=0)	$vm.alert("Sorry there is a problem. You can try again later.")
+                else{
+					$('#F_06__ID').show();
+                }
+            }});
+			//-------------
+		}
+		//--------------------------------------------------------
+		var calculation=function(record){
+			//-------------
+            // calculation
+			var vpsqi1=0;
+            var v4=parseFloat(record.PSQI4);
+            if(v4>=7) vpsqi1=0;
+            if(v4<7 && v4>=6) vpsqi1=1;
+            if(v4<6 && v4>=5) vpsqi1=2;
+            if(v4<5) vpsqi1=3;
+            record.PSQIDURAT=vpsqi1.toString();
+            var pqsi5j="0";
+    		if(record.PSQI5j=='') pqsi5j="0"; else pqsi5j=record.PSQI5ji;
+    		var vpsqi2=parseInt(record.PSQI5b)+parseInt(record.PSQI5c)+parseInt(record.PSQI5d)+parseInt(record.PSQI5e)+parseInt(record.PSQI5f)+parseInt(record.PSQI5g)+parseInt(record.PSQI5h)+parseInt(record.PSQI5i)+parseInt(pqsi5j);
+            if(vpsqi2==0) record.PSQIDISTB="0";
+    		if(vpsqi2>=1 && vpsqi2<=9) record.PSQIDISTB="1";
+    		if(vpsqi2>9 && vpsqi2<=18) record.PSQIDISTB="2";
+    		if(vpsqi2>18) record.PSQIDISTB="3";
+
+            var vpsqi3=0;
+            var v2=parseInt(record.PSQI2)
+    		if(v2>=0 && v2<=15) vpsqi3=0;
+    		if(v2>15 && v2<=30) vpsqi3=1;
+    		if(v2>30 && v2<=60) vpsqi3=2;
+    		if(v2>60) vpsqi3=3;
+            var v5i=parseInt(record.PSQI5a)
+    		if((vpsqi3+v5i)==0) record.PSQILATEN="0";
+    		if((vpsqi3+v5i)>=1 && (vpsqi3+v5i)<=2) record.PSQILATEN="1";
+    		if((vpsqi3+v5i)>=3 && (vpsqi3+v5i)<=4) record.PSQILATEN="2";
+    		if((vpsqi3+v5i)>=5 && (vpsqi3+v5i)<=6) record.PSQILATEN="3";
+
+            var v18i=parseInt(record.PSQI8)
+            var v19i=parseInt(record.PSQI9)
+    		if((v18i+v19i)==0) record.PSQIDAYDYS="0";
+    		if((v18i+v19i)>=1 && (v18i+v19i)<=2) record.PSQIDAYDYS="1";
+    		if((v18i+v19i)>=3 && (v18i+v19i)<=4) record.PSQIDAYDYS="2";
+    		if((v18i+v19i)>=5 && (v18i+v19i)<=6) record.PSQIDAYDYS="3";
+
+            var startTime = record.PSQI1;
+            var endTime = record.PSQI3;
+
+            var startTimeArray = startTime.split(":");
+            var startInputHrs = parseInt(startTimeArray[0]);
+            var startInputMins = parseInt(startTimeArray[1]);
+
+            var endTimeArray = endTime.split(":");
+            var endInputHrs = parseInt(endTimeArray[0]);
+            var endInputMins = parseInt(endTimeArray[1]);
+
+            var startMin = startInputHrs*60 + startInputMins;
+            var endMin = endInputHrs*60 + endInputMins;
+
+            var result;
+
+            if (endMin < startMin) {
+               var minutesPerDay = 24*60;
+               result = minutesPerDay - startMin;  // Minutes till midnight
+               result += endMin; // Minutes in the next day
+            } else {
+              result = endMin - startMin;
+            }
+            var v4=parseInt(record.PSQI4)*60*100;
+            var vpsqi4=v4/result;
+            if(vpsqi4>=85) record.PSQIHSE="0";
+    		if(vpsqi4<85 && vpsqi4>=75) record.PSQIHSE="1";
+    		if(vpsqi4<75 && vpsqi4>=65) record.PSQIHSE="2";
+    		if(vpsqi4<65) record.PSQIHSE="3";
+            record.PSQISLPQUAL=record.PSQI6;
+    		record.PSQIMEDS=record.PSQI7;
+            record.PSQI=(
+                parseInt(record.PSQIDURAT)+
+                parseInt(record.PSQIDISTB)+
+                parseInt(record.PSQILATEN)+
+                parseInt(record.PSQIDAYDYS)+
+                parseInt(record.PSQIHSE)+
+                parseInt(record.PSQISLPQUAL)+
+                parseInt(record.PSQIMEDS)).toString();
+			//-------------
+			record.ISI=(parseInt(record.ISI_2)+parseInt(record.ISI_3)+parseInt(record.ISI_4)+parseInt(record.ISI_5)+parseInt(record.ISI_1a)+parseInt(record.ISI_1b)+parseInt(record.ISI_1c)).toString();
+            record.ISI_1=(parseInt(record.ISI_1a)+parseInt(record.ISI_1b)+parseInt(record.ISI_1c)).toString();
+			record.Include="No";
+            if(parseInt(record.PSQI)>5 && parseInt(record.ISI)>14) {
+				record.Include="Yes";
+			}
+            //-------------
+			return record;
+		}
+		//--------------------------------------------------------
+    }
+</script>
+<style>
+	#D__ID{
+		height:100%;
+		overflow: auto;
+		animation: vm_module_fadein 1.0s;
+		background: rgba(151,164,181,0.95);
+	}
+	#form_container__ID{
+		padding-top:50px;
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+
+		font-family: Verdana,sans-serif;
+		font-size: 15px;
+		line-height: 1.5;
+		color: #000;
+	}
+	#form_container__ID .row__ID{
+		padding:6px 0;
+	}
+	#form_container__ID .row__ID:hover{
+		/*background-color: #727b84;*/
+	}
+	#header__ID{
+		background-color:#727b84;
+		color:#000;
+		padding:10px 15px 10px 15px;
+		font-size:150%;
+	}
+	#quest__ID{
+		padding:5px 5px 5px 5px;
+		font-size:120%;
+	}
+	#F__ID{
+		border:1px solid #000;
+		padding:6px 15px 20px 15px;
+	}
+	#F__ID label
+		display: inline-block;
+		margin: .6rem 0 .3rem 0;
+	}
+
+	#F__ID fieldset {
+		border: 0px solid #c0c0c0;
+		margin: 0;
+		padding: 0;
+	}
+	@media screen and (max-width:768px){
+		#form_container__ID{
+			padding:20px 10px 50px 10px;
+		}
+	}
+	.control {
+		font-family: arial;
+		/*display: block;*/
+		position: relative;
+		padding-left: 30px;
+	   /* margin-bottom: 20px;*/
+		padding-top: 3px;
+		cursor: pointer;
+		font-size: 16px;
+	}
+	.control input {
+			position: absolute;
+			z-index: -1;
+			opacity: 0;
+		}
+	.control_indicator {
+		position: absolute;
+		top: 2px;
+		left: 0;
+		height: 20px;
+		width: 20px;
+		background: #e6e6e6;
+		border: 0px solid #000000;
+	}
+	.control-radio .control_indicator {
+		border-radius: 50%;
+	}
+
+	.control:hover input ~ .control_indicator,
+	.control input:focus ~ .control_indicator {
+		background: #cccccc;
+	}
+
+	.control input:checked ~ .control_indicator {
+		background: #A51C3D;
+	}
+	.control:hover input:not([disabled]):checked ~ .control_indicator,
+	.control input:checked:focus ~ .control_indicator {
+		background: #0e6647d;
+	}
+	.control input:disabled ~ .control_indicator {
+		background: #e6e6e6;
+		opacity: 0.6;
+		pointer-events: none;
+	}
+	.control_indicator:after {
+		box-sizing: unset;
+		content: '';
+		position: absolute;
+		display: none;
+	}
+	.control input:checked ~ .control_indicator:after {
+		display: block;
+	}
+	.control-radio .control_indicator:after {
+		left: 7px;
+		top: 7px;
+		height: 0px;
+		width: 0px;
+		border-radius: 50%;
+		background: #ffffff;
+	}
+	.control-radio input:disabled ~ .control_indicator:after {
+		background: #7b7b7b;
+	}
+</style>
