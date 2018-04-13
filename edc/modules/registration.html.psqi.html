@@ -8,79 +8,81 @@
         </div>
     </div>
     <hr style='border-top:1px solid #000;margin:0'></hr>
-    <div class="row row__ID">
-        <div class="col-sm-12 control-group">
-            <span id=quest__ID><i>1. During the past month, what time have you usually gone to bed at night?</i></span>
-        </div>
-    </div>
-    <div class="row row__ID">
-        <div class="col-sm-5 control-group text-right">
-            <span id=quest__ID>BED TIME</span>
-        </div>
-        <div class="col-sm-3 control-group">
-                <input type="text" class="form-control" name="PSQI1" id="PSQI1__ID" placeholder="HH:MM" required />
-        </div>
-        <div class="col-sm-4 control-group">
-            <span id=quest__ID><i>24 hour clock</i></span>
-        </div>
-    </div>
-    <div id=bedtime__ID class="alert alert-danger" style=display:none>
-        Please check format. 24 Hour clock with 2 digits for Hours, ":", and 2 for Minutes (HH:MM).
-    </div>
-    <hr style='border-top:1px solid #000;margin:0'></hr>
-    <div class="row row__ID">
-        <div class="col-sm-12 control-group">
-            <span id=quest__ID><i>2. During the past month, how long (in minutes) has it usually taken you to fall asleep each night?</i></span>
-        </div>
-    </div>
-    <div class="row row__ID">
-        <div class="col-sm-5 control-group  text-right">
-            <span id=quest__ID>NUMBER OF MINUTES</span>
-        </div>
-        <div class="col-sm-3 control-group">
-                <input type="text" class="form-control" name="PSQI2" id="PSQI2__ID" placeholder="Minutes" required />
-        </div>
-    </div>
-    <div id=sleeplat__ID class="alert alert-danger" style=display:none>
-        Please check format. 1 to 3 digits.
-    </div>
-    <hr style='border-top:1px solid #000;margin:0'></hr>
-    <div class="row row__ID">
-        <div class="col-sm-12 control-group">
-            <span id=quest__ID><i>3. During the past month, what time have you usually gotten up in the morning?</i></span>
-        </div>
-    </div>
-    <div class="row row__ID">
-        <div class="col-sm-5 control-group  text-right">
-            <span id=quest__ID>GETTING UP TIME</span>
-        </div>
-        <div class="col-sm-3 control-group">
-                <input type="text" class="form-control" name="PSQI3" id="PSQI3__ID" placeholder="HH:MM" required />
-        </div>
-        <div class="col-sm-4 control-group">
-            <span id=quest__ID><i>24 hour clock</i></span>
-        </div>
-    </div>
-    <div id=getup__ID class="alert alert-danger" style=display:none>
-        Please check format. 24 Hour clock with 2 digits for Hours, ":", and 2 for Minutes (HH:MM).
-    </div>
-    <hr style='border-top:1px solid #000;margin:0'></hr>
-    <div class="row row__ID">
-        <div class="col-sm-12 control-group">
-            <span id=quest__ID><i>4. During the past month, how many hours of <u>actual sleep</u> did you get at night?<br>(This may be different than the number of hours you spent in bed.)</i></span>
-        </div>
-    </div>
-    <div class="row row__ID">
-        <div class="col-sm-5 control-group text-right" >
-            <span id=quest__ID>HOURS OF SLEEP PER NIGHT</span>
-        </div>
-        <div class="col-sm-3 control-group"style="max-width:250px">
-                <input type="text" class="form-control" name="PSQI4" id="PSQI4__ID" placeholder="Hours" required />
-        </div>
-    </div>
-    <div id=sleep__ID class="alert alert-danger" style=display:none>
-        Please check format. 1 to 2 digits and if needed one decimal number.
-    </div>
+
+
+	<div class="row row__ID">
+		<div class="col-sm-12 control-group">
+			<span id=quest__ID><i>1. During the past month, what time have you usually gone to bed at night?</i></span>
+		</div>
+	</div>
+	<div class="row row__ID">
+		<div class="col-sm-5 control-group text-right">
+			<span id=quest__ID>BED TIME</span>
+		</div>
+		<div class="col-sm-3 control-group">
+				<input type="time" class="form-control" name="PSQI1" id="PSQI1__ID" _placeholder="HH:MM" required />
+		</div>
+		<div class="col-sm-4 control-group">
+			<!--<span id=quest__ID><i>24 hour clock</i></span>-->
+		</div>
+	</div>
+	<div id=bedtime__ID class="alert alert-danger" style=display:none>
+		Please check format. 24 Hour clock with 2 digits for Hours, ":", and 2 for Minutes (HH:MM).
+	</div>
+	<hr style='border-top:1px solid #000;margin:0'></hr>
+	<div class="row row__ID">
+		<div class="col-sm-12 control-group">
+			<span id=quest__ID><i>2. During the past month, how long (in minutes) has it usually taken you to fall asleep each night?</i></span>
+		</div>
+	</div>
+	<div class="row row__ID">
+		<div class="col-sm-5 control-group  text-right">
+			<span id=quest__ID>NUMBER OF MINUTES</span>
+		</div>
+		<div class="col-sm-3 control-group">
+				<input type="number" class="form-control" name="PSQI2" id="PSQI2__ID" placeholder="Minutes" required  min=1 max=999 />
+		</div>
+	</div>
+	<div id=sleeplat__ID class="alert alert-danger" style=display:none>
+		Please check format. 1 to 3 digits.
+	</div>
+	<hr style='border-top:1px solid #000;margin:0'></hr>
+	<div class="row row__ID">
+		<div class="col-sm-12 control-group">
+			<span id=quest__ID><i>3. During the past month, what time have you usually gotten up in the morning?</i></span>
+		</div>
+	</div>
+	<div class="row row__ID">
+		<div class="col-sm-5 control-group  text-right">
+			<span id=quest__ID>GETTING UP TIME</span>
+		</div>
+		<div class="col-sm-3 control-group">
+				<input type="time" class="form-control" name="PSQI3" id="PSQI3__ID" _placeholder="HH:MM" required />
+		</div>
+		<div class="col-sm-4 control-group">
+			<!--<span id=quest__ID><i>24 hour clock</i></span>-->
+		</div>
+	</div>
+	<div id=getup__ID class="alert alert-danger" style=display:none>
+		Please check format. 24 Hour clock with 2 digits for Hours, ":", and 2 for Minutes (HH:MM).
+	</div>
+	<hr style='border-top:1px solid #000;margin:0'></hr>
+	<div class="row row__ID">
+		<div class="col-sm-12 control-group">
+			<span id=quest__ID><i>4. During the past month, how many hours of <u>actual sleep</u> did you get at night?<br>(This may be different than the number of hours you spent in bed.)</i></span>
+		</div>
+	</div>
+	<div class="row row__ID">
+		<div class="col-sm-5 control-group text-right" >
+			<span id=quest__ID>HOURS OF SLEEP PER NIGHT</span>
+		</div>
+		<div class="col-sm-3 control-group"style="max-width:250px">
+				<input type="number" class="form-control" name="PSQI4" id="PSQI4__ID" placeholder="Hours" required min=1 max=99 />
+		</div>
+	</div>
+	<div id=sleep__ID class="alert alert-danger" style=display:none>
+		Please check format. 1 to 2 digits and if needed one decimal number.
+	</div>
     <hr style='border-top:1px solid #000;margin:0'></hr>
     <div class="row row__ID">
         <div class="col-sm-12 control-group">
@@ -692,23 +694,23 @@
 			if($('#PSQI5j__ID').val()=='') $('#PSQI5ji__ID').prop('required',false);
 			else $('#PSQI5ji__ID').prop('required',true);
 		})
-		$("#F_03__ID input[name='PSQI10']").click(function(){
+		$("#F_02__ID input[name='PSQI10']").click(function(){
 			var ip=$('input:radio[name=PSQI10]:checked').val();
-			if(ip=="2" || ip=="3"){
-				$("#F_03__ID input[name='PSQI10a']").prop('disabled',false).prop('required',true);
-				$("#F_03__ID input[name='PSQI10b']").prop('disabled',false).prop('required',true);
-				$("#F_03__ID input[name='PSQI10c']").prop('disabled',false).prop('required',true);
-				$("#F_03__ID input[name='PSQI10d']").prop('disabled',false).prop('required',true);
+			if(ip=="1" || ip=="2" || ip=="3"){
+				$("#F_02__ID input[name='PSQI10a']").prop('disabled',false).prop('required',true);
+				$("#F_02__ID input[name='PSQI10b']").prop('disabled',false).prop('required',true);
+				$("#F_02__ID input[name='PSQI10c']").prop('disabled',false).prop('required',true);
+				$("#F_02__ID input[name='PSQI10d']").prop('disabled',false).prop('required',true);
 				$("#PSQI10e__ID").prop('disabled',false)
 				$("#F__ID input[name='PSQI10ei']").prop('disabled',false)
 			}
 			else{
-				$("#F_03__ID input[name='PSQI10a']").prop('disabled',true).prop('required',false);
-				$("#F_03__ID input[name='PSQI10b']").prop('disabled',true).prop('required',false);
-				$("#F_03__ID input[name='PSQI10c']").prop('disabled',true).prop('required',false);
-				$("#F_03__ID input[name='PSQI10d']").prop('disabled',true).prop('required',false);
+				$("#F_02__ID input[name='PSQI10a']").prop('disabled',true).prop('required',false);
+				$("#F_02__ID input[name='PSQI10b']").prop('disabled',true).prop('required',false);
+				$("#F_02__ID input[name='PSQI10c']").prop('disabled',true).prop('required',false);
+				$("#F_02__ID input[name='PSQI10d']").prop('disabled',true).prop('required',false);
 				$("#PSQI10e__ID").prop('disabled',true)
-				$("#F_03__ID input[name='PSQI10ei']").prop('disabled',true)
+				$("#F_02__ID input[name='PSQI10ei']").prop('disabled',true)
 			}
 		})
 

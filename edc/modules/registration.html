@@ -18,7 +18,7 @@
 			<br><br>
 		</form>
         <form id=F_03__ID>
-			VmInclude:__CURRENT_PATH__/registration.html.participant.html
+			VmInclude:__CURRENT_PATH__/registration.html.pis.html
 			<br>
 			<button type="button" id=f3_p__ID class="btn btn-secondary">Previous</button>
 			<button type="submit" class="btn btn-secondary">Next</button>
@@ -52,6 +52,7 @@
         //----------------------------------------
         var prefix=$vm.module_list[$vm.vm['__ID'].name].prefix; if(prefix==undefined) prefix="";
 		//----------------------------------------
+		var record={};
 		var hide_all=function(){
 			$('#F_01__ID').hide();
             $('#F_02__ID').hide();
@@ -73,18 +74,22 @@
 			$('#F_06__ID')[0].reset();
 			$('#F_07__ID')[0].reset();
 			psqi_onload__ID();
-			hide_all(); $('#F_01__ID').show();
+			hide_all(); $('#F_03__ID').show();
         })
         //-------------------------------------
-        $('#F_01__ID').submit(		function(event){	event.preventDefault();	hide_all(); $('#F_02__ID').show();})
+        $('#F_01__ID').submit(		function(event){	event.preventDefault();	hide_all(); $('#F_02__ID').show();
+			var a=$("#F_01__ID").serializeArray(); $.each(a, function () { record[this.name]=this.value || '';});
+		})
 		//-------------------------------------
         $('#f2_p__ID').on('click',	function(event){	event.preventDefault();	hide_all(); $('#F_01__ID').show();	})
         $('#F_02__ID').submit(		function(event){	event.preventDefault();	hide_all();
-			var record={};
 			var a=$("#F_02__ID").serializeArray(); $.each(a, function () { record[this.name]=this.value || '';});
 			calculation(record);
-			if(record.Include=='No') $('#F_03__ID').show();
-			else submit_record_no();
+alert(record.ISI)
+alert(record.PSQI)
+alert(record.Include)
+			if(record.Include=='No') submit_record_no();
+			else $('#F_03__ID').show();
 		})
         //--------------------------------------------------------
 		var submit_record_no=function(){
@@ -215,7 +220,7 @@
 			record.ISI=(parseInt(record.ISI_2)+parseInt(record.ISI_3)+parseInt(record.ISI_4)+parseInt(record.ISI_5)+parseInt(record.ISI_1a)+parseInt(record.ISI_1b)+parseInt(record.ISI_1c)).toString();
             record.ISI_1=(parseInt(record.ISI_1a)+parseInt(record.ISI_1b)+parseInt(record.ISI_1c)).toString();
 			record.Include="No";
-            if(parseInt(record.PSQI)>5 && parseInt(record.ISI)>14) {
+            if(parseInt(record.PSQI)>5 || parseInt(record.ISI)>14) {
 				record.Include="Yes";
 			}
             //-------------
