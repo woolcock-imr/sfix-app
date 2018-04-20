@@ -10,14 +10,14 @@
 			<button type="submit" class="btn btn-secondary">Next</button>
 			<br><br>
         </form>
-		<form id=F_02__ID>
+        <form id=F_02__ID>
 			VmInclude:__CURRENT_PATH__/registration.html.psqi.html
 			<br>
 			<button type="button" id=f2_p__ID class="btn btn-secondary">Previous</button>
 			<button type="submit" class="btn btn-secondary">Next</button>
 			<br><br>
 		</form>
-		<form id=F_03__ID>
+        <form id=F_03__ID>
 			VmInclude:__CURRENT_PATH__/registration.html.pis.html
 			<br>
 			<button type="button" id=f3_p__ID class="btn btn-secondary">Previous</button>
@@ -161,25 +161,6 @@
             }});
 			//-------------
 		}
-		//--------------------------------------------------------
-		$('#F_05__ID input[name=Wearabledevice_2]').attr('disabled',true);
-		$('#F_05__ID input[name=Wearabledevice_3]').attr('disabled',true);
-		$('#F_05__ID input[name=Wearabledevice_4]').attr('disabled',true);
-
-		$("#F_05__ID input[name=Wearabledevice_1]").on('click',function(){
-			if($(this).attr('value')=='Yes'){
-alert($(this).attr('value'))
-				$('#F_05__ID input[name=Wearabledevice_2]').attr('disabled',false);
-				$('#F_05__ID input[name=Wearabledevice_3]').attr('disabled',false);
-				$('#F_05__ID input[name=Wearabledevice_4]').attr('disabled',false);
-			}
-			else{
-alert($(this).attr('value'))
-				$('#F_05__ID input[name=Wearabledevice_2]').attr('disabled',true);
-				$('#F_05__ID input[name=Wearabledevice_3]').attr('disabled',true);
-				$('#F_05__ID input[name=Wearabledevice_4]').attr('disabled',true);
-			}
-		})
 		//--------------------------------------------------------
 		var calculation=function(record){
 			//-------------
