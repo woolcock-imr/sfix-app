@@ -247,7 +247,21 @@
     <br>
 </div>
 <script>
-	var isi__ID=function(){
+    //------------------------------
+	var page_isi__ID=function(){
 	}
-	isi__ID()
+    //------------------------------
+	page_isi__ID()
+    //------------------------------
+    var page_isi_cal__ID=function(record){
+        record.ISI=(parseInt(record.ISI_2)+parseInt(record.ISI_3)+parseInt(record.ISI_4)+parseInt(record.ISI_5)+parseInt(record.ISI_1a)+parseInt(record.ISI_1b)+parseInt(record.ISI_1c)).toString();
+        record.ISI_1=(parseInt(record.ISI_1a)+parseInt(record.ISI_1b)+parseInt(record.ISI_1c)).toString();
+	}
+    //------------------------------
+    var page_isi_serialize__ID=function(record){
+        var a=$("#F_01__ID").serializeArray();
+        $.each(a, function () { record[this.name]=this.value || '';});
+        page_isi_cal__ID(record);
+    }
+    //------------------------------
 </script>

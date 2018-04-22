@@ -807,6 +807,12 @@
 		//--------------------------------------------------------
 	}
 	page_sfix_app__ID();
+    //------------------------------
+    var page_sfix_app_serialize__ID=function(record){
+        var a=$("#F_05__ID").serializeArray();
+        $.each(a, function () { record[this.name]=this.value || '';});
+    }
+    //------------------------------
 </script>
 <style>
 	#D__ID{
