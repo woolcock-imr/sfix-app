@@ -1,78 +1,72 @@
 <div class="container">
-	<div class="row row__ID">
-		<div class="col-sm control-group">
-		<span style='font-size:14pt'><b>We’re working to create a mobile App to improve people’s sleep. This survey will help us understand more about what would be relevant and helpful to the people who would use the App.</b></span>
+	<div class="row">
+		<div class="col-sm">
+			<span style='font-size:14pt'><b>We’re working to create a mobile App to improve people’s sleep. This survey will help us understand more about what would be relevant and helpful to the people who would use the App.</b></span>
 		</div>
 	</div>
-</div>
-<hr style='border-top:1px solid #000;margin:0'></hr>
-<div class="container">
+	<hr style='border-top:1px solid #000;margin:0'></hr>
     <div class="row row__ID">
-        <div class="col-sm" >
-            <span id=quest__ID><br>1.	What is your gender?</span>
-        </div>
-		<div class="col-sm"><br>
-			<select  class="form-control"  name=Sex id=Sex__ID required><option> </option><option>Male</option><option>Female</option><option>Prefer not to say</option></select><br>
+        <div class="col-sm col-lg-6">1. What is your gender?</div>
+		<div class="col-sm col-lg-6">
+			<select class="form-control" name=Sex required>
+				<option></option>
+				<option>Male</option>
+				<option>Female</option>
+				<option>Prefer not to say</option>
+			</select>
 		</div>
     </div>
-	<div  class="row row__ID">
-        <div class="col-sm">
-            <span id=quest__ID>2.	What is your age?</span>
-        </div>
-        <div class="col-sm">
-			<input class="form-control" type="text" name="DOB" id=DOB__ID placeholder="Years" required ><br>
+	<div class="row row__ID">
+        <div class="col-sm col-lg-6">2. What is your age?</div>
+        <div class="col-sm col-lg-6">
+			<input class="form-control" type="text" name="DOB" placeholder="Years" required >
         </div>
     </div>
 
-		<!--Question 3 -->
-			<div class="row row__ID">
-								<div class="col-sm">
-									    <span id=quest__ID>3. Which of these best describes the highest level of education you have completed?</span>
-								</div>
-						<div class="col-sm-4 control-group"style="max-width:250px">
-								  <label class="control control-radio"  style="width:200px">
+	<!--Question 3 -->
+	<div class="row row__ID">
+		<div class="col-sm col-lg-6">
+			3. Which of these best describes the highest level of education you have completed?
+		</div>
+		<div class="col-sm col-lg-6">
+			<label class="control control-radio"><input type="radio" name="Education" required value='Secondary School'><div class="control_indicator text-center"></div>Secondary School</label>
+			<label class="control control-radio"  style="width:200px">
 					       <input type="radio"  name="Education" id="Education_ID"  required value='Secondary School' />
 					  	 	 <div class="control_indicator text-center"></div>
 					       Secondary School
 					      </label>
 
-					  <label class="control control-radio"  style="width:200px">
+			<label class="control control-radio"  style="width:200px">
 					        <input type="radio"  name="Education"  value='Trade certificate ' />
 					        <div class="control_indicator  text-center"></div>
 					        Trade certificate
 					        </label>
-					  <label class="control control-radio"  style="width:200px">
+			<label class="control control-radio"  style="width:200px">
 									<input type="radio"  name="Education"   value='Diploma' />
 									<div class="control_indicator text-center"></div>
 									Diploma
 									</label>
-						<label class="control control-radio"  style="width:200px">
+			<label class="control control-radio"  style="width:200px">
 									<input type="radio"  name="Education"   value='Bachelor degree' />
 									<div class="control_indicator text-center"></div>
 									Bachelor degree
 									</label>
-						<label class="control control-radio"  style="width:200px">
+			<label class="control control-radio"  style="width:200px">
 									<input type="radio"  name="Education"   value='Postgraduate Degree' />
 									<div class="control_indicator text-center"></div>
 									Postgraduate Degree
 									</label>
-
-							</div>
-			</div>
-		<br>
-		<br>
-
-		<!--Question 4-->
-
-				<div  class="row row__ID">
-								 <div class="col-sm">
-								<span id=quest__ID>4. What is your current employment status? </span> <br> <i>(select all that apply)</i>
-								</div>
-
-								<div class="col-sm-4 control-group"style="max-width:250px">
+		</div>
+	</div>
+	<!--Question 4-->
+	<div  class="row row__ID">
+		<div class="col-sm col-lg-6">
+			4. What is your current employment status?<br> <i>(select all that apply)</i>
+		</div>
+		<div class="col-sm col-lg-6">
 
 								<label class="control control-radio"  style="width:200px">
-								<input type="radio"  name="Employment" id="Employment_ID"  required value='Employed full time (40 or more hours per week)' />
+								<input type="radio"  name="Employment" required value='Employed full time (40 or more hours per week)' />
 								<div class="control_indicator text-center"></div>
 								Employed full time <br> (40 or more hours per week)
 								</label>
@@ -84,57 +78,53 @@
 							</label>
 
 							<label class="control control-radio"  style="width:200px">
-									<input type="radio"  name="Education"   value='Unemployed' />
+									<input type="radio"  name="Employment"   value='Unemployed' />
 									<div class="control_indicator text-center"></div>
 								Unemployed
 							</label>
 
 							<label class="control control-radio"  style="width:200px">
-								<input type="radio"  name="Education"   value=' Student' />
+								<input type="radio"  name="Employment"   value=' Student' />
 								<div class="control_indicator text-center"></div>
 							 Student
 							</label>
 
 							<label class="control control-radio"  style="width:200px">
-									<input type="radio"  name="Education"   value='Retired' />
+									<input type="radio"  name="Employment"   value='Retired' />
 									<div class="control_indicator text-center"></div>
 								 Retired
 							</label>
 
-							<label class="control control-radio"  style="width:200px">
-									<input type="radio"  name="Education"   value='Other' />
+							<label class="control control-radio">
+									<input type="radio"  name="Employment"   value='Other' />
 									<div class="control_indicator text-center"></div>
 								Other (please specify)
-								</div>
 							</label>
+							<input type=text name=Employment_other>
+
 
 					</div>
-		<br>
-		<br>
-
-		<!--Question 5-->
-			<div  class="row row__ID">
-					<div class="col-sm">
-					<span id=quest__ID>5.	What is your current occupation?</span>
-					</div>
-					<div class="col-sm">
+				</div>
+	<!--Question 5-->
+	<div  class="row row__ID">
+		<div class="col-sm col-lg-6">
+					5. What is your current occupation?
+		</div>
+		<div class="col-sm col-lg-6">
 					<input class="form-control" type="text" name="occupation" id=Occupation_ID placeholder="Occupation" required>
-					</div>
-			</div>
-		<br>
-		<br>
-
+		</div>
+	</div>
 	<hr style='border-top:1px solid #000;margin:0'></hr>
-	<div id=subheader__ID>
+	<div class=subheader__ID>
 		About your phone
-	</div><br>
+	</div>
 	<div class="row row__ID">
-        <div class="col-sm-8 control-group" style="max-width:550px">
-            <span id=quest__ID>1.	How often do you use a smartphone?</span><br><i>(e.g. iPhone, Samsung Galaxy or other touch screen mobile phone)</i>
+		<div class="col-sm col-lg-6">
+            1. How often do you use a smartphone?<br><i>(e.g. iPhone, Samsung Galaxy or other touch screen mobile phone)</i>
         </div>
-        <div class="col-sm-4 control-group"style="max-width:250px">
+		<div class="col-sm col-lg-6">
             <label class="control control-radio"  style="width:200px">
-                <input type="radio"  name="smartphone_use" id="smartphone_use__ID"  required value='Never' />
+                <input type="radio"  name="smartphone_use" required value='Never' />
                 <div class="control_indicator text-center"></div>
                 Never
             </label>
@@ -156,28 +146,24 @@
         </div>
     </div> <br>
 	<div  class="row row__ID">
-        <div class="col-sm">
-            <span id=quest__ID>2.	What type of phone do you use?</span><br><i>(e.g. iPhone 5, HTC One, Samsung Galaxy 4, etc.)</i>
-        </div> <br>
-        <div class="col-sm">
-			<input class="form-control" type="text" name="smartphone" id=smartphone__ID placeholder="Phone Type" required >
+		<div class="col-sm col-lg-6">
+            2. What type of phone do you use?<br><i>(e.g. iPhone 5, HTC One, Samsung Galaxy 4, etc.)</i>
         </div>
-    </div><br>
+		<div class="col-sm col-lg-6">
+			<input class="form-control" type="text" name="smartphone" placeholder="Phone Type" required >
+        </div>
+    </div>
 	<hr style='border-top:1px solid #000;margin:0'></hr>
-
-	<div id=subheader__ID>
+	<div class=subheader__ID>
 		Wearable Devices
 	</div><br>
-
 	<div class="row row__ID">
-		<div class="col-sm-8 control-group" style="max-width:550px">
-			<span id=quest__ID>1.	Do you use a wearable device? </span><br> <i>(e.g. pedometer, fitness tracker, smart watch etc.)</i>
+		<div class="col-sm col-lg-6">
+			1. Do you use a wearable device?<br><i>(e.g. pedometer, fitness tracker, smart watch etc.)</i>
 		</div>
-
-		<div class="col-sm-4 control-group" style="max-width:250px;">
-
+		<div class="col-sm col-lg-6">
 			<label class="col-sm-4 control control-radio"  style="width:200px">
-			<input type="radio"  name="Wearabledevice_1" id="Wearabledevice_1__ID"  required value=' Yes' />
+			<input type="radio"  name="Wearabledevice_1" required value='Yes' />
 			<div class="control_indicator text-center"></div>
 			Yes
 			</label>
@@ -189,27 +175,21 @@
 			</label>
 		</div>
 	</div>
-		<br><br>
-
 	<div class="row row__ID">
-					<div class="col-sm">
-					<span id=quest__ID> 2.	Which brand of wearable device do you use? </span> <br><i>(e.g. Fitbit, Nike, Apple Watch, Garmin)</i>
-					</div>
-				<div class="col-sm">
-				<input class="form-control" type="text" name="Wearabledevice_2" id=Wearabledevice_2__ID placeholder="Wearable Device"> </textarea>
-					</div>
+		<div class="col-sm col-lg-6">
+			2. Which brand of wearable device do you use?<br><i>(e.g. Fitbit, Nike, Apple Watch, Garmin)</i>
+		</div>
+		<div class="col-sm col-lg-6">
+			<input class="form-control" type="text" name="Wearabledevice_2" placeholder="Wearable Device"> </textarea>
+		</div>
 	</div>
-		<br><br>
-
 	<div class="row row__ID">
-			<div class="col-sm-8 control-group" style="max-width:550px">
-			<span id=quest__ID>3.	What do you use the wearable device for? </span> <br>(select all that apply)
-			</div>
-
-			<div class="col-sm-4 control-group"style="max-width:250px">
-
+		<div class="col-sm col-lg-6">
+			3. What do you use the wearable device for?<br>(select all that apply)
+		</div>
+		<div class="col-sm col-lg-6">
 			<label class="control control-radio"  style="width:200px">
-			<input type="radio"  name="Wearabledevice_3" id="Wearabledevice_3__ID"  required value='Communication' />
+			<input type="radio"  name="Wearabledevice_3" required value='Communication' />
 			<div class="control_indicator text-center"></div>
 			Communication
 			</label>
@@ -237,19 +217,15 @@
 			<div class="control_indicator  text-center"></div>
 			Sport
 			</label>
-			</div>
+		</div>
 	</div>
-		<br><br>
-
 	<div class="row row__ID">
-			<div class="col-sm-8 control-group" style="max-width:550px">
-			<span id=quest__ID>4.	What features of the wearable device do you use? </span> <i>(select all that apply)</i>
-			</div>
-
-			<div class="col-sm-4 control-group"style="max-width:250px">
-
+		<div class="col-sm col-lg-6">
+			4. What features of the wearable device do you use?<i>(select all that apply)</i>
+		</div>
+		<div class="col-sm col-lg-6">
 				<label class="control control-radio"  style="width:200px">
-				<input type="radio"  name="Wearabledevice_4" id="Wearabledevice_4__ID"  required value='Breathing or relaxation exercises' />
+				<input type="radio"  name="Wearabledevice_4" required value='Breathing or relaxation exercises' />
 				<div class="control_indicator text-center"></div>
 				Breathing or relaxation exercises
 				</label>
@@ -295,20 +271,17 @@
 				<div class="control_indicator  text-center"></div>
 				Other (please specify)
 				</label>
-
-			</div>
+		</div>
 	</div>
-		<br>
-
-<!--Sleep Context-->
-	<div id=subheader__ID>
+	<!--Sleep Context-->
+	<div class=subheader__ID>
 		Your sleep context
-	</div><br>
+	</div>
 	<div class="row row__ID">
-        <div class="col-sm-8 control-group" style="max-width:550px">
-            <span id=quest__ID>1.	How often do you keep your phone by your bed at night?</span>
+		<div class="col-sm col-lg-6">
+            1. How often do you keep your phone by your bed at night?
         </div>
-        <div class="col-sm-4 control-group"style="max-width:250px">
+		<div class="col-sm col-lg-6">
             <label class="control control-radio"  style="width:200px">
                 <input type="radio"  name="sleep_context_1" id="sleep_context_1__ID"  required value='Almost always' />
                 <div class="control_indicator text-center"></div>
@@ -330,12 +303,12 @@
                 Never
             </label>
         </div>
-    </div><br>
+    </div>
 	<div class="row row__ID">
-        <div class="col-sm-8 control-group" style="max-width:550px">
-            <span id=quest__ID>2.	How often do you use your phone as an alarm clock?</span>
+		<div class="col-sm col-lg-6">
+            2. How often do you use your phone as an alarm clock?
         </div>
-        <div class="col-sm-4 control-group"style="max-width:250px">
+		<div class="col-sm col-lg-6">
             <label class="control control-radio"  style="width:200px">
                 <input type="radio"  name="sleep_context_2" id="sleep_context_2__ID"  required value='Almost always' />
                 <div class="control_indicator text-center"></div>
@@ -359,10 +332,10 @@
         </div>
     </div><br>
 	<div class="row row__ID">
-        <div class="col-sm-8 control-group" style="max-width:550px">
-            <span id=quest__ID>3.	How often do you use your phone to help you wake up in the morning <i>(e.g. by checking email or web browsing as soon as you wake)?</i></span>
+		<div class="col-sm col-lg-6">
+            3. How often do you use your phone to help you wake up in the morning <i>(e.g. by checking email or web browsing as soon as you wake)?</i>
         </div>
-        <div class="col-sm-4 control-group"style="max-width:250px">
+		<div class="col-sm col-lg-6">
             <label class="control control-radio"  style="width:200px">
                 <input type="radio"  name="sleep_context_3" id="sleep_context_3__ID"  required value='Almost always' />
                 <div class="control_indicator text-center"></div>
@@ -386,14 +359,14 @@
         </div>
     </div><br>
 	<hr style='border-top:1px solid #000;margin:0'></hr>
-	<div id=subheader__ID>
+	<div class=subheader__ID>
 		The ideal sleep app
-	</div><br>
+	</div>
 	<div class="row row__ID">
-        <div class="col-sm-8 control-group" style="max-width:550px">
-            <span id=quest__ID>1.	If an app were developed that <u>guided you through a program proven to improve sleep</u>, how likely do you think you would be to try it?</span>
+		<div class="col-sm col-lg-6">
+            1. If an app were developed that <u>guided you through a program proven to improve sleep</u>, how likely do you think you would be to try it?
         </div>
-        <div class="col-sm-4 control-group"style="max-width:250px">
+		<div class="col-sm col-lg-6">
             <label class="control control-radio"  style="width:200px">
                 <input type="radio"  name="sleep_app_1" id="sleep_app_1__ID"  required value='Very unlikely' />
                 <div class="control_indicator text-center"></div>
@@ -417,10 +390,10 @@
         </div>
     </div><br>
 	<div class="row row__ID">
-        <div class="col-sm-8 control-group" style="max-width:550px">
-            <span id=quest__ID>2.	If an app were developed to help you <u>optimise your sleep, in order to improve productivity and performance</u>, how likely do you think you would be to try it?</span>
+		<div class="col-sm col-lg-6">
+            2. If an app were developed to help you <u>optimise your sleep, in order to improve productivity and performance</u>, how likely do you think you would be to try it?
         </div>
-        <div class="col-sm-4 control-group"style="max-width:250px">
+		<div class="col-sm col-lg-6">
             <label class="control control-radio"  style="width:200px">
                 <input type="radio"  name="sleep_app_2" id="sleep_app_2__ID"  required value='Very unlikely' />
                 <div class="control_indicator text-center"></div>
@@ -442,12 +415,12 @@
                 Very likely
             </label>
         </div>
-    </div><br>
+    </div>
 	<div class="row row__ID">
-        <div class="col-sm-8 control-group" style="max-width:550px">
-            <span id=quest__ID>3.	If an app were developed to help you <u>discover your true individual sleep needs</u> (how many hours you really need each night), how likely do you think you would be to try it?</span>
+		<div class="col-sm col-lg-6">
+            3. If an app were developed to help you <u>discover your true individual sleep needs</u> (how many hours you really need each night), how likely do you think you would be to try it?
         </div>
-        <div class="col-sm-4 control-group"style="max-width:250px">
+		<div class="col-sm col-lg-6">
             <label class="control control-radio"  style="width:200px">
                 <input type="radio"  name="sleep_app_3" id="sleep_app_3__ID"  required value='Very unlikely' />
                 <div class="control_indicator text-center"></div>
@@ -470,16 +443,16 @@
             </label>
         </div>
     </div><br>
-	<div class="row row__ID">
-		<div class="col-sm-8 control-group" style="max-width:550px">
-			<span id=quest__ID>4.	If an ideal sleep app were developed, how important do you think it would be for it to...</span>
+	<div class="row">
+		<div class="col-sm col-lg-6">
+			4. If an ideal sleep app were developed, how important do you think it would be for it to...
 		</div>
 	</div>
 	<div class="row row__ID">
-        <div class="col-sm-8 control-group" style="max-width:550px"><br>
-            <span id=quest__ID>a. Include a sleep diary and tracking...</span>
+		<div class="col-sm col-lg-6">
+            a. Include a sleep diary and tracking...
         </div>
-        <div class="col-sm-4 control-group"style="max-width:250px">
+		<div class="col-sm col-lg-6">
             <label class="control control-radio"  style="width:200px">
                 <input type="radio"  name="sleep_app_4a" id="sleep_app_4a__ID" required value='Unimportant' />
                 <div class="control_indicator text-center"></div>
@@ -503,10 +476,10 @@
         </div>
     </div><br>
 	<div class="row row__ID">
-        <div class="col-sm-8 control-group" style="max-width:550px">
-            <span id=quest__ID>b. Allow tracking of diet, exercise and other lifestyle factors...</span>
+		<div class="col-sm col-lg-6">
+            b. Allow tracking of diet, exercise and other lifestyle factors...
         </div>
-        <div class="col-sm-4 control-group"style="max-width:250px">
+		<div class="col-sm col-lg-6">
             <label class="control control-radio"  style="width:200px">
                 <input type="radio"  name="sleep_app_4b" id="sleep_app_4b__ID"  required value='Unimportant' />
                 <div class="control_indicator text-center"></div>
@@ -530,10 +503,10 @@
         </div>
     </div><br>
 	<div class="row row__ID">
-        <div class="col-sm-8 control-group" style="max-width:550px">
-            <span id=quest__ID>c. Let you share or compare sleep data with friends or other users ...</span>
+		<div class="col-sm col-lg-6">
+            c. Let you share or compare sleep data with friends or other users ...
         </div>
-        <div class="col-sm-4 control-group"style="max-width:250px">
+		<div class="col-sm col-lg-6">
             <label class="control control-radio"  style="width:200px">
                 <input type="radio"  name="sleep_app_4c" id="sleep_app_4c__ID"  required value='Unimportant' />
                 <div class="control_indicator text-center"></div>
@@ -557,10 +530,10 @@
         </div>
     </div><br>
 	<div class="row row__ID">
-        <div class="col-sm-8 control-group" style="max-width:550px">
-            <span id=quest__ID>d. Let you share sleep data with your doctor...</span>
+		<div class="col-sm col-lg-6">
+            <span>d. Let you share sleep data with your doctor...</span>
         </div>
-        <div class="col-sm-4 control-group"style="max-width:250px">
+		<div class="col-sm col-lg-6">
             <label class="control control-radio"  style="width:200px">
                 <input type="radio"  name="sleep_app_4d" id="sleep_app_4d__ID"  required value='Unimportant' />
                 <div class="control_indicator text-center"></div>
@@ -582,12 +555,12 @@
                 Essential
             </label>
         </div>
-    </div><br>
+    </div>
 	<div class="row row__ID">
-        <div class="col-sm-8 control-group" style="max-width:550px">
-            <span id=quest__ID>e. Link to a wearable tracking device </span>(e.g. Fitbit, Jawbone, ActiWatch)...
+		<div class="col-sm col-lg-6">
+            <span>e. Link to a wearable tracking device </span>(e.g. Fitbit, Jawbone, ActiWatch)...
         </div>
-        <div class="col-sm-4 control-group"style="max-width:250px">
+		<div class="col-sm col-lg-6">
             <label class="control control-radio"  style="width:200px">
                 <input type="radio"  name="sleep_app_4e" id="sleep_app_4e__ID"  required value='Unimportant' />
                 <div class="control_indicator text-center"></div>
@@ -611,10 +584,10 @@
         </div>
     </div><br>
 	<div class="row row__ID">
-        <div class="col-sm-8 control-group" style="max-width:550px">
-            <span id=quest__ID>f. Be usable offline (without an internet connection)...</span>
+		<div class="col-sm col-lg-6">
+            <span>f. Be usable offline (without an internet connection)...</span>
         </div>
-        <div class="col-sm-4 control-group"style="max-width:250px">
+		<div class="col-sm col-lg-6">
             <label class="control control-radio"  style="width:200px">
                 <input type="radio"  name="sleep_app_4f" id="sleep_app_4f__ID"  required value='Unimportant' />
                 <div class="control_indicator text-center"></div>
@@ -638,10 +611,10 @@
         </div>
     </div><br>
 	<div class="row row__ID">
-        <div class="col-sm-8 control-group" style="max-width:550px">
-            <span id=quest__ID>g. Not require the phone to be by the bed...</span>
+		<div class="col-sm col-lg-6">
+            <span>g. Not require the phone to be by the bed...</span>
         </div>
-        <div class="col-sm-4 control-group"style="max-width:250px">
+		<div class="col-sm col-lg-6">
             <label class="control control-radio"  style="width:200px">
                 <input type="radio"  name="sleep_app_4g" id="sleep_app_4g__ID"  required value='Unimportant' />
                 <div class="control_indicator text-center"></div>
@@ -665,133 +638,175 @@
         </div>
     </div><br>
 	<hr style='border-top:1px solid #000;margin:0'></hr>
-	<div id=subheader__ID>
+	<div class=subheader__ID>
 		Apps you have used
 	</div>
 	<div class="row row__ID">
-		<div class="col-sm"><br>
-			<span id=quest__ID>1.	Do you use any health apps on your phone? If yes, please list any that come to mind...<br><i>(e.g. Fitbit, Food diary, MyFitness Pal, etc.)</i></span>
+		<div class="col-sm col-lg-6">
+			<span>1. Do you use any health apps on your phone? If yes, please list any that come to mind...<br><i>(e.g. Fitbit, Food diary, MyFitness Pal, etc.)</i></span>
         </div>
-        <div class="col-sm"><br>
-			<textarea class="form-control" name="app_used_1" id=app_used_1__ID  ></textarea>
+		<div class="col-sm col-lg-6">
+			<textarea class="form-control" name="app_used_1" required></textarea>
         </div>
 	</div>
 	<div class="row row__ID">
-		<div class="col-sm"><br>
-			<span id=quest__ID>2.	Have you ever downloaded any apps for helping you sleep?  They don’t necessarily have to be designed for sleep specifically <i>(e.g. relaxation music, meditation app, etc.)</i> If yes, please list any that come to mind...</span>
+		<div class="col-sm col-lg-6">
+			<span>2. Have you ever downloaded any apps for helping you sleep?  They don’t necessarily have to be designed for sleep specifically <i>(e.g. relaxation music, meditation app, etc.)</i> If yes, please list any that come to mind...</span>
 		</div>
-        <div class="col-sm"><br><br>
-			<textarea class="form-control" name="app_used_2" id=app_used_2__ID  ></textarea>
+		<div class="col-sm col-lg-6">
+			<textarea class="form-control" name="app_used_2" required></textarea>
         </div>
 	</div>
 	<div class="row row__ID">
-		<div class="col-sm">
-			<br><br>
-			<span id=quest__ID>a. For any apps you listed above...</span>  <br> <br>
-			<span id=quest__ID>List some things you <b>liked</b> about them:</span>
+		<div class="col-sm col-lg-6">
+			<span>a. For any apps you listed above...</span>  <br> <br>
+			<span>List some things you <b>liked</b> about them:</span>
 		</div><br>
-        <div class="col-sm"> <br><br><br>
-		<br>	<textarea class="form-control" name="app_used_2a_1" id=app_used_2a_1__ID  ></textarea><br><br><br>
+		<div class="col-sm col-lg-6">
+			<textarea class="form-control" name="app_used_2a_1" required></textarea><br><br><br>
 		</div>
 	</div>
 	<div class="row row__ID">
-		<div class="col-sm">
-			<span id=quest__ID>List some things you <b>did not like</b> about them:</span>
+		<div class="col-sm col-lg-6">
+			<span>List some things you <b>did not like</b> about them:</span>
         </div>
-        <div class="col-sm">
-			<textarea class="form-control" name="app_used_2a_2" id=app_used_2a_2__ID  ></textarea>
-		</div> <br><br><br>
-	</div><br><br><br>
+		<div class="col-sm col-lg-6">
+			<textarea class="form-control" name="app_used_2a_2" required></textarea>
+		</div>
+	</div>
 	<div class="row row__ID">
-		<div class="col-sm">
-			<span id=quest__ID>3.	Have you ever used any websites for improving sleep? If yes, please list any that come to mind...<br><i>(e.g. Shut-i)</i></span> <br><br>
+		<div class="col-sm col-lg-6">
+			<span>3. Have you ever used any websites for improving sleep? If yes, please list any that come to mind...<br><i>(e.g. Shut-i)</i></span> <br><br>
         </div>
-        <div class="col-sm">
-			<textarea class="form-control" name="app_used_3" id=app_used_3__ID  ></textarea>
+		<div class="col-sm col-lg-6">
+			<textarea class="form-control" name="app_used_3" required></textarea>
         </div>
 	</div>
 	<div class="row row__ID">
-		<div class="col-sm">
-			<span id=quest__ID>a. For any apps you listed above...  <br> <br> </span>
-				<span id=quest__ID>List some things you <b>liked</b> about them:</span>
+		<div class="col-sm col-lg-6">
+			<span>a. For any apps you listed above...  <br> <br> </span>
+				<span>List some things you <b>liked</b> about them:</span>
         </div>
-				<br>
-        <div class="col-sm">
-			<br><br><br><textarea class="form-control" name="app_used_3a_1" id=app_used_3a_1__ID  ></textarea><br>
+		<div class="col-sm col-lg-6">
+			<textarea class="form-control" name="app_used_3a_1" required></textarea>
         </div>
 	</div>
 	<br>
 	<br>
 	<div class="row row__ID">
-		<div class="col-sm">
-				<span id=quest__ID>List some things you <b>did not like</b> about them:</span>
+		<div class="col-sm col-lg-6">
+				<span>List some things you <b>did not like</b> about them:</span>
         </div>
-        <div class="col-sm">
-			<br><textarea class="form-control" name="app_used_3a_2" id=app_used_3a_2__ID  ></textarea>
+		<div class="col-sm col-lg-6">
+			<textarea class="form-control" name="app_used_3a_2" required></textarea>
         </div>
 	</div><br>
 	<hr style='border-top:1px solid #000;margin:0'></hr>
-	<div id=subheader__ID>
+	<div class=subheader__ID>
 		One last thing...
 	</div>
-	<br>
 	<div class="row row__ID">
-		<div class="col-sm">
-			<span id=quest__ID>Anything else that would make the perfect sleep app? What should we include? What should we avoid? </span>
+		<div class="col-sm col-lg-6">
+			<span>Anything else that would make the perfect sleep app? What should we include? What should we avoid? </span>
 		</div>
-		<div class="col-sm">
-			<textarea class="form-control" name="last_1" id=last_1__ID  ></textarea>  <br>
+		<div class="col-sm col-lg-6">
+			<textarea class="form-control" name="last_1" required></textarea>
 		</div>
 	</div>
 	<hr style='border-top:1px solid #000;margin:0'></hr><br>
 	<div class="row row__ID">
-        <div class="col-sm-8 control-group" style="max-width:550px">
-            <span id=quest__ID>I would like to take part in the prize draw for 1 of 5 Westfield Gift Cards valued at $50.  </span>
+		<div class="col-sm col-lg-6">
+            <span>I would like to take part in the prize draw for 1 of 5 Westfield Gift Cards valued at $50.  </span>
         </div>
-
-        <div class="col-sm-4 control-group"style="max-width:250px">
+		<div class="col-sm col-lg-6">
             <label class="control control-radio"  style="width:200px">
-                <input type="radio"  name="draw" id="draw__ID"  value='Yes' />
+                <input type="radio"  name="draw" value='Yes' required>
                 <div class="control_indicator text-center"></div>
                 Yes
             </label>
             <label class="control control-radio"  style="width:200px">
-                    <input type="radio"  name="draw"  value='No' />
+                    <input type="radio"  name="draw"  value='No'>
                 <div class="control_indicator  text-center"></div>
                 No
             </label>
         </div>
     </div>
 	<div class="row row__ID">
-		<div class="col-sm">
-			<br>
-			<span id=quest__ID>I am happy to provide the following mobile number and if successful in the Prize Draw be contacted by a member of the research team to receive the prize.</span>
+		<div class="col-sm col-lg-6">
+			<span>I am happy to provide the following mobile number and if successful in the Prize Draw be contacted by a member of the research team to receive the prize.</span>
         </div>
-        <div class="col-sm"><br>
-			Mobile Number<input class="form-control" type="text" name="mobile" id=mobile__ID placeholder="Mobile Number"  />
-        </div>
-	</div>
-	<div class="row row__ID">
-		<div class="col-sm">
-			<br>
-			<span id=quest__ID>If you would like to receive a summary of our findings following the study, please enter your email address here:</span>
-        </div>
-        <div class="col-sm">
-			Email Address<input class="form-control" type="text" name="email" id=email__ID placeholder="Email"  />
+		<div class="col-sm col-lg-6">
+			Mobile Number<input class="form-control" type="text" name="mobile" placeholder="Mobile Number" required>
         </div>
 	</div>
 	<div class="row row__ID">
-		<div class="col-sm">
-			<span id=quest__ID>
-
+		<div class="col-sm col-lg-6">
+			<span>If you would like to receive a summary of our findings following the study, please enter your email address here:</span>
+        </div>
+		<div class="col-sm col-lg-6">
+			Email Address<input class="form-control" type="text" name="email" placeholder="Email" required>
         </div>
 	</div>
-</div>	
+</div>
 <script>
-	/*
-	function F__ID(){
+	var page_sfix_app__ID=function(){
+		$("textarea[name=app_used_2]").change(function(){
+			if($(this).val()==''){
+				$("textarea[name=app_used_2a_1]").prop('disabled',true).prop('required',false);
+				$("textarea[name=app_used_2a_2]").prop('disabled',true).prop('required',false);
+			}
+			else{
+				$("textarea[name=app_used_2a_1]").prop('disabled',false).prop('required',true);
+				$("textarea[name=app_used_2a_2]").prop('disabled',false).prop('required',true);
+			}
+		})
+		$("textarea[name=app_used_2]").triggerHandler('change');
+
+		$("textarea[name=app_used_3]").change(function(){
+			if($(this).val()==''){
+				$("textarea[name=app_used_3a_1]").prop('disabled',true).prop('required',false);
+				$("textarea[name=app_used_3a_2]").prop('disabled',true).prop('required',false);
+			}
+			else{
+				$("textarea[name=app_used_3a_1]").prop('disabled',false).prop('required',true);
+				$("textarea[name=app_used_3a_2]").prop('disabled',false).prop('required',true);
+			}
+		})
+		$("textarea[name=app_used_3]").triggerHandler('change');
+
+
+		$('#F_05__ID input[name=Wearabledevice_2]').prop('disabled',true);
+		$('#F_05__ID input[name=Wearabledevice_3]').prop('disabled',true);
+		$('#F_05__ID input[name=Wearabledevice_4]').prop('disabled',true);
+
+		$("#F_05__ID input[name=Wearabledevice_1]").on('click',function(){
+			if($(this).val()=='Yes'){
+				$('#F_05__ID input[name=Wearabledevice_2]').prop('disabled',false);
+				$('#F_05__ID input[name=Wearabledevice_3]').prop('disabled',false);
+				$('#F_05__ID input[name=Wearabledevice_4]').prop('disabled',false);
+			}
+			else{
+				$('#F_05__ID input[name=Wearabledevice_2]').prop('disabled',true);
+				$('#F_05__ID input[name=Wearabledevice_3]').prop('disabled',true);
+				$('#F_05__ID input[name=Wearabledevice_4]').prop('disabled',true);
+			}
+		})
+		//--------------------------------------------------------
+		$('#F_05__ID input[name=mobile]').prop('disabled',true);
+		$('#F_05__ID input[name=email]').prop('disabled',true);
+		$("#F_05__ID input[name=draw]").on('click',function(){
+			if($(this).val()=='Yes'){
+				$('#F_05__ID input[name=mobile]').prop('disabled',false);
+				$('#F_05__ID input[name=email]').prop('disabled',false);
+			}
+			else{
+				$('#F_05__ID input[name=mobile]').prop('disabled',true);
+				$('#F_05__ID input[name=email]').prop('disabled',true);
+			}
+		})
+		//--------------------------------------------------------
 	}
-	*/
+	page_sfix_app__ID();
 </script>
 <style>
 	#D__ID{
@@ -811,19 +826,19 @@
 	    line-height: 1.5;
 	    color: #000;
 	}
-	#form_container__ID .row__ID{
+	.row__ID{
 	    padding:6px 0;
 	}
-	/*#form_container__ID .row__ID:hover{
-	    background-color: #727b84;
-	}*/
+	.row__ID:hover{
+	    background-color: rgba(0,0,0,0.1);
+	}
 	#header__ID{
 	    background-color:#727b84;
 	    color:#000;
 	    padding:10px 15px 10px 15px;
 	    font-size:150%;
 	}
-	#subheader__ID{
+	.subheader__ID{
 	    background-color:#727b84;
 	    color:#000;
 	    padding:5px 10px 5px 10px;

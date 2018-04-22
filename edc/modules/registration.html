@@ -162,25 +162,6 @@
 			//-------------
 		}
 		//--------------------------------------------------------
-		$('#F_05__ID input[name=Wearabledevice_2]').attr('disabled',true);
-		$('#F_05__ID input[name=Wearabledevice_3]').attr('disabled',true);
-		$('#F_05__ID input[name=Wearabledevice_4]').attr('disabled',true);
-
-		$("#F_05__ID input[name=Wearabledevice_1]").on('click',function(){
-			if($(this).attr('value')=='Yes'){
-alert($(this).attr('value'))
-				$('#F_05__ID input[name=Wearabledevice_2]').attr('disabled',false);
-				$('#F_05__ID input[name=Wearabledevice_3]').attr('disabled',false);
-				$('#F_05__ID input[name=Wearabledevice_4]').attr('disabled',false);
-			}
-			else{
-alert($(this).attr('value'))
-				$('#F_05__ID input[name=Wearabledevice_2]').attr('disabled',true);
-				$('#F_05__ID input[name=Wearabledevice_3]').attr('disabled',true);
-				$('#F_05__ID input[name=Wearabledevice_4]').attr('disabled',true);
-			}
-		})
-		//--------------------------------------------------------
 		var calculation=function(record){
 			//-------------
             // calculation
