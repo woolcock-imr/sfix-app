@@ -634,7 +634,7 @@
         <div class="col-sm-10 control-group" style="max-width:500px">
             <span id=quest__ID>e. Other restlessness while you sleep; please describe below
                 <div class="col-sm control-group">
-                        <input type=text class="form-control" name="PSQI10e" id="PSQI10e__ID" placeholder="Describe" required>
+                        <input type=text class="form-control" name="PSQI10e" id="PSQI10e__ID" placeholder="Describe">
                 </div>
             </span>
         </div>
@@ -665,41 +665,8 @@
 </div>
 <script>
 	//---------------------------------------------------------------
+	//Q10e is optional (but if there is input in box, then need to select from multiple choice) --- from Melissa 2018-04-26
 	var page_psqi__ID=function(){
-        /*
-        $("#F_02__ID input[name=PSQI5j]").on('click',function(){
-			if($(this).attr('value')=='0') $('#PSQI5ji__ID').attr('disabled',true);
-			else $('#PSQI5ji__ID').attr('disabled',false);
-		})
-        $("#F_02__ID input[name=PSQI5j]").triggerHandler('click');
-
-        $("#F_02__ID input[name=PSQI10e]").on('click',function(){
-			if($(this).attr('value')=='0') $('#PSQI10ei__ID').attr('disabled',true);
-			else $('#PSQI10ei__ID').attr('disabled',false);
-		})
-        $("#F_02__ID input[name=PSQI10e]").triggerHandler('click');
-
-
-        $("#F_02__ID input[name='PSQI10']").click(function(){
-			var ip=$('input:radio[name=PSQI10]:checked').val();
-			if(ip=="1" || ip=="2" || ip=="3"){
-				$("#F_02__ID input[name='PSQI10a']").prop('disabled',false).prop('required',true);
-				$("#F_02__ID input[name='PSQI10b']").prop('disabled',false).prop('required',true);
-				$("#F_02__ID input[name='PSQI10c']").prop('disabled',false).prop('required',true);
-				$("#F_02__ID input[name='PSQI10d']").prop('disabled',false).prop('required',true);
-				$("#PSQI10e__ID").prop('disabled',false)
-				$("#F_02__ID input[name='PSQI10ei']").prop('disabled',false)
-			}
-			else{
-				$("#F_02__ID input[name='PSQI10a']").prop('disabled',true).prop('required',false);
-				$("#F_02__ID input[name='PSQI10b']").prop('disabled',true).prop('required',false);
-				$("#F_02__ID input[name='PSQI10c']").prop('disabled',true).prop('required',false);
-				$("#F_02__ID input[name='PSQI10d']").prop('disabled',true).prop('required',false);
-				$("#PSQI10e__ID").prop('disabled',true)
-				$("#F_02__ID input[name='PSQI10ei']").prop('disabled',true)
-			}
-		})
-        */
         //-------------------------------------
         $('#F_02__ID input[name=PSQI5j]').change(function(){
             if($(this).val()=='')  $('#F_02__ID input[name=PSQI5ji]').prop('checked',false).prop('disabled',true).prop('required',false);
@@ -712,8 +679,7 @@
                 $("#F_02__ID input[name='PSQI10b']").prop('disabled',false).prop('required',true);
                 $("#F_02__ID input[name='PSQI10c']").prop('disabled',false).prop('required',true);
                 $("#F_02__ID input[name='PSQI10d']").prop('disabled',false).prop('required',true);
-                $("#F_02__ID input[name='PSQI10e']").prop('disabled',false);
-                //$("#F_02__ID input[name='PSQI10ei']").prop('disabled',false)
+                //$("#F_02__ID input[name='PSQI10e']").prop('disabled',false);
                 $('#F_02__ID input[name=PSQI10e]').triggerHandler('change');
             }
             else{
@@ -721,7 +687,7 @@
                 $("#F_02__ID input[name='PSQI10b']").prop('disabled',true).prop('required',false).prop('checked',false);
                 $("#F_02__ID input[name='PSQI10c']").prop('disabled',true).prop('required',false).prop('checked',false);
                 $("#F_02__ID input[name='PSQI10d']").prop('disabled',true).prop('required',false).prop('checked',false);
-                $("#F_02__ID input[name='PSQI10e']").prop('disabled',true); $("#F_02__ID input[name='PSQI10e']").val('');
+                //$("#F_02__ID input[name='PSQI10e']").prop('disabled',true); $("#F_02__ID input[name='PSQI10e']").val('');
                 $("#F_02__ID input[name='PSQI10ei']").prop('disabled',true).prop('required',false).prop('checked',false);
             }
         })

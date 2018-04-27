@@ -100,7 +100,7 @@
 									<div class="control_indicator text-center"></div>
 								Other (please specify)
 							</label>
-							<input type=text name=Employment_other>
+							<input type=text name=Employment_other disabled required>
 
 
 					</div>
@@ -180,97 +180,48 @@
 			2. Which brand of wearable device do you use?<br><i>(e.g. Fitbit, Nike, Apple Watch, Garmin)</i>
 		</div>
 		<div class="col-sm col-lg-6">
-			<input class="form-control" type="text" name="Wearabledevice_2" placeholder="Wearable Device"> </textarea>
+			<input class="form-control" type="text" name="Wearabledevice_2" placeholder="Wearable Device" required> </textarea>
 		</div>
 	</div>
 	<div class="row row__ID">
 		<div class="col-sm col-lg-6">
 			3. What do you use the wearable device for?<br>(select all that apply)
 		</div>
-		<div class="col-sm col-lg-6">
-			<label class="control control-radio"  style="width:200px">
-			<input type="radio"  name="Wearabledevice_3" required value='Communication' />
-			<div class="control_indicator text-center"></div>
-			Communication
-			</label>
-
-			<label class="control control-radio"  style="width:200px">
-			<input type="radio"  name="Wearabledevice_3"  value='Fitness' />
-			<div class="control_indicator  text-center"></div>
-			Fitness
-			</label>
-
-			<label class="control control-radio"  style="width:200px">
-			<input type="radio"  name="Wearabledevice_3"  value='Health' />
-			<div class="control_indicator  text-center"></div>
-			Health
-			</label>
-
-			<label class="control control-radio"  style="width:200px">
-			<input type="radio"  name="Wearabledevice_3"  value='Navigation' />
-			<div class="control_indicator  text-center"></div>
-			Navigation
-			</label>
-
-			<label class="control control-radio"  style="width:200px">
-			<input type="radio"  name="Wearabledevice_3"  value='Sport' />
-			<div class="control_indicator  text-center"></div>
-			Sport
-			</label>
+		<div class="col-sm col-lg-6" id=Wearabledevice_3__ID>
+			<label><input type="checkbox" name='Wearabledevice_3_Communication' /> Communication</label>
+			<br>
+			<label><input type="checkbox" name='Wearabledevice_3_Fitness' /> Fitness</label>
+			<br>
+			<label><input type="checkbox" name='Wearabledevice_3_Health' /> Health</label>
+			<br>
+			<label><input type="checkbox" name='Wearabledevice_3_Navigation' /> Navigation</label>
+			<br>
+			<label><input type="checkbox" name='Wearabledevice_3_Sport' /> Sport</label>
+			<br>
 		</div>
 	</div>
 	<div class="row row__ID">
 		<div class="col-sm col-lg-6">
 			4. What features of the wearable device do you use?<i>(select all that apply)</i>
 		</div>
-		<div class="col-sm col-lg-6">
-				<label class="control control-radio"  style="width:200px">
-				<input type="radio"  name="Wearabledevice_4" required value='Breathing or relaxation exercises' />
-				<div class="control_indicator text-center"></div>
-				Breathing or relaxation exercises
-				</label>
-
-				<label class="control control-radio"  style="width:200px">
-				<input type="radio"  name="Wearabledevice_4"  value='Heart-rate monitoring' />
-				<div class="control_indicator  text-center"></div>
-				Heart-rate monitoring
-				</label>
-
-				<label class="control control-radio"  style="width:200px">
-				<input type="radio"  name="Wearabledevice_4"  value='Sleep tracking' />
-				<div class="control_indicator  text-center"></div>
-				Sleep tracking
-				</label>
-
-				<label class="control control-radio"  style="width:200px">
-				<input type="radio"  name="Wearabledevice_4"  value='Step tracking' />
-				<div class="control_indicator  text-center"></div>
-				Step tracking
-				</label>
-
-				<label class="control control-radio"  style="width:200px">
-				<input type="radio"  name="Wearabledevice_4"  value='Stress tracking' />
-				<div class="control_indicator  text-center"></div>
-				Stress tracking
-				</label>
-
-				<label class="control control-radio"  style="width:200px">
-				<input type="radio"  name="Wearabledevice_4"  value='Sports or physical activity tracking' />
-				<div class="control_indicator  text-center"></div>
-				Sports or physical activity tracking
-				</label>
-
-				<label class="control control-radio"  style="width:200px">
-				<input type="radio"  name="Wearabledevice_4"  value='Workout intensity' />
-				<div class="control_indicator  text-center"></div>
-				Workout intensity
-				</label>
-
-				<label class="control control-radio"  style="width:200px">
-				<input type="radio"  name="Wearabledevice_4"  value='Other' />
-				<div class="control_indicator  text-center"></div>
-				Other (please specify)
-				</label>
+		<div class="col-sm col-lg-6" id=Wearabledevice_4__ID>
+				<label><input type="checkbox"  name="Wearabledevice_4_Breathing or relaxation exercises" /> Breathing or relaxation exercises</label>
+				<br>
+				<label><input type="checkbox"  name="Wearabledevice_4_Heart-rate monitoring" /> Heart-rate monitoring</label>
+				<br>
+				<label><input type="checkbox"  name="Wearabledevice_4_Wearabledevice_4_Sleep tracking" /> Sleep tracking</label>
+				<br>
+				<label><input type="checkbox"  name="Wearabledevice_4_Step tracking" /> Step tracking</label>
+				<br>
+				<label><input type="checkbox"  name="Wearabledevice_4_Stress tracking" /> Stress tracking</label>
+				<br>
+				<label><input type="checkbox"  name="Wearabledevice_4_Sports or physical activity tracking" /> Sports or physical activity tracking</label>
+				<br>
+				<label><input type="checkbox"  name="Wearabledevice_4_Workout intensity" /> Workout intensity</label>
+				<br>
+				<label><input type="checkbox"  name="Wearabledevice_4_Other" />Other (please specify)</label>
+				<br>
+				<input type=text name=Wearabledevice_4_Other_specify disabled required />
 		</div>
 	</div>
 	<!--Sleep Context-->
@@ -646,7 +597,7 @@
 			<span>1. Do you use any health apps on your phone? If yes, please list any that come to mind...<br><i>(e.g. Fitbit, Food diary, MyFitness Pal, etc.)</i></span>
         </div>
 		<div class="col-sm col-lg-6">
-			<textarea class="form-control" name="app_used_1" required></textarea>
+			<textarea class="form-control" name="app_used_1"></textarea>
         </div>
 	</div>
 	<div class="row row__ID">
@@ -654,7 +605,7 @@
 			<span>2. Have you ever downloaded any apps for helping you sleep?  They don’t necessarily have to be designed for sleep specifically <i>(e.g. relaxation music, meditation app, etc.)</i> If yes, please list any that come to mind...</span>
 		</div>
 		<div class="col-sm col-lg-6">
-			<textarea class="form-control" name="app_used_2" required></textarea>
+			<textarea class="form-control" name="app_used_2"></textarea>
         </div>
 	</div>
 	<div class="row row__ID">
@@ -679,7 +630,7 @@
 			<span>3. Have you ever used any websites for improving sleep? If yes, please list any that come to mind...<br><i>(e.g. Shut-i)</i></span> <br><br>
         </div>
 		<div class="col-sm col-lg-6">
-			<textarea class="form-control" name="app_used_3" required></textarea>
+			<textarea class="form-control" name="app_used_3"></textarea>
         </div>
 	</div>
 	<div class="row row__ID">
@@ -744,7 +695,7 @@
 			<span>If you would like to receive a summary of our findings following the study, please enter your email address here:</span>
         </div>
 		<div class="col-sm col-lg-6">
-			Email Address<input class="form-control" type="text" name="email" placeholder="Email" required>
+			Email Address<input class="form-control" type="text" name="email" placeholder="Email" >
         </div>
 	</div>
 </div>
@@ -776,21 +727,45 @@
 
 
 		$('#F_05__ID input[name=Wearabledevice_2]').prop('disabled',true);
-		$('#F_05__ID input[name=Wearabledevice_3]').prop('disabled',true);
-		$('#F_05__ID input[name=Wearabledevice_4]').prop('disabled',true);
+		$('#Wearabledevice_3__ID input[type=checkbox]').prop('disabled',true);
+		$('#Wearabledevice_4__ID input[type=checkbox]').prop('disabled',true);
 
 		$("#F_05__ID input[name=Wearabledevice_1]").on('click',function(){
 			if($(this).val()=='Yes'){
 				$('#F_05__ID input[name=Wearabledevice_2]').prop('disabled',false);
-				$('#F_05__ID input[name=Wearabledevice_3]').prop('disabled',false);
-				$('#F_05__ID input[name=Wearabledevice_4]').prop('disabled',false);
+				$('#Wearabledevice_3__ID input[type=checkbox]').prop('disabled',false);
+				$('#Wearabledevice_4__ID input[type=checkbox]').prop('disabled',false);
 			}
 			else{
 				$('#F_05__ID input[name=Wearabledevice_2]').prop('disabled',true);
-				$('#F_05__ID input[name=Wearabledevice_3]').prop('disabled',true);
-				$('#F_05__ID input[name=Wearabledevice_4]').prop('disabled',true);
+				$('#Wearabledevice_3__ID input[type=checkbox]').prop('disabled',true);
+				$('#Wearabledevice_3__ID input[type=checkbox]').prop('checked', false);
+				$('#Wearabledevice_4__ID input[type=checkbox]').prop('disabled',true);
+				$('#Wearabledevice_4__ID input[type=checkbox]').prop('checked', false);
+				$('#F_05__ID input[name=Wearabledevice_4_Other_specify]').prop('disabled',true);
+				$('#F_05__ID input[name=Wearabledevice_4_Other_specify]').val('');
 			}
 		})
+		$("#F_05__ID input[name=Employment]").on('click',function(){
+			if($(this).val()=='Other'){
+				$('#F_05__ID input[name=Employment_other]').prop('disabled',false);
+			}
+			else{
+				$('#F_05__ID input[name=Employment_other]').prop('disabled',true);
+			}
+		})
+
+		$("#F_05__ID input[name=Wearabledevice_4_Other]").on('click',function(){
+			var c=$("#F_05__ID input[name=Wearabledevice_4_Other]").prop('checked');
+			if(c==true){
+				$('#F_05__ID input[name=Wearabledevice_4_Other_specify]').prop('disabled',false);
+			}
+			else{
+				$('#F_05__ID input[name=Wearabledevice_4_Other_specify]').prop('disabled',true);
+			}
+		})
+
+
 		//--------------------------------------------------------
 		$('#F_05__ID input[name=mobile]').prop('disabled',true);
 		$('#F_05__ID input[name=email]').prop('disabled',true);
