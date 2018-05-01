@@ -1,3 +1,4 @@
+<!--<button id=test__ID type=button >Check checkbox only</button>-->
 <div class="container">
 	<div class="row">
 		<div class="col-sm">
@@ -63,48 +64,22 @@
 		<div class="col-sm col-lg-6">
 			4. What is your current employment status?<br> <i>(select all that apply)</i>
 		</div>
-		<div class="col-sm col-lg-6">
-
-								<label class="control control-radio"  style="width:200px">
-								<input type="radio"  name="Employment" required value='Employed full time (40 or more hours per week)' />
-								<div class="control_indicator text-center"></div>
-								Employed full time <br> (40 or more hours per week)
-								</label>
-
-							<label class="control control-radio"  style="width:200px">
-								<input type="radio"  name="Employment"  value='Employed part time (up to 38 hours per week)' />
-								<div class="control_indicator  text-center"></div>
-							Employed part time<br> (up to 38 hours per week)
-							</label>
-
-							<label class="control control-radio"  style="width:200px">
-									<input type="radio"  name="Employment"   value='Unemployed' />
-									<div class="control_indicator text-center"></div>
-								Unemployed
-							</label>
-
-							<label class="control control-radio"  style="width:200px">
-								<input type="radio"  name="Employment"   value=' Student' />
-								<div class="control_indicator text-center"></div>
-							 Student
-							</label>
-
-							<label class="control control-radio"  style="width:200px">
-									<input type="radio"  name="Employment"   value='Retired' />
-									<div class="control_indicator text-center"></div>
-								 Retired
-							</label>
-
-							<label class="control control-radio">
-									<input type="radio"  name="Employment"   value='Other' />
-									<div class="control_indicator text-center"></div>
-								Other (please specify)
-							</label>
-							<input type=text name=Employment_other disabled required>
-
-
-					</div>
-				</div>
+		<div class="col-sm col-lg-6" id=Employment__ID>
+			<label><input type="checkbox" name='Employment_full_time' required /> Employed full time (40 or more hours per week)</label>
+			<br>
+			<label><input type="checkbox" name='Employment_part_time' /> Employed part time (up to 38 hours per week)</label>
+			<br>
+			<label><input type="checkbox" name='Employment_unemployed' /> Unemployed</label>
+			<br>
+			<label><input type="checkbox" name='Employment_student' /> Student</label>
+			<br>
+			<label><input type="checkbox" name='Employment_retired' /> Retired</label>
+			<br>
+			<label><input type="checkbox"  name="Employment_other" />Other (please specify)</label>
+			<br>
+			<input type=text name=Employment_other_specify disabled required />
+		</div>
+	</div>
 	<!--Question 5-->
 	<div  class="row row__ID">
 		<div class="col-sm col-lg-6">
@@ -188,7 +163,7 @@
 			3. What do you use the wearable device for?<br>(select all that apply)
 		</div>
 		<div class="col-sm col-lg-6" id=Wearabledevice_3__ID>
-			<label><input type="checkbox" name='Wearabledevice_3_Communication' /> Communication</label>
+			<label><input type="checkbox" name='Wearabledevice_3_Communication' required /> Communication</label>
 			<br>
 			<label><input type="checkbox" name='Wearabledevice_3_Fitness' /> Fitness</label>
 			<br>
@@ -205,19 +180,19 @@
 			4. What features of the wearable device do you use?<i>(select all that apply)</i>
 		</div>
 		<div class="col-sm col-lg-6" id=Wearabledevice_4__ID>
-				<label><input type="checkbox"  name="Wearabledevice_4_Breathing or relaxation exercises" /> Breathing or relaxation exercises</label>
+				<label><input type="checkbox"  name="Wearabledevice_4_Breathing_or_relaxation_exercises" required /> Breathing or relaxation exercises</label>
 				<br>
-				<label><input type="checkbox"  name="Wearabledevice_4_Heart-rate monitoring" /> Heart-rate monitoring</label>
+				<label><input type="checkbox"  name="Wearabledevice_4_Heart_rate_monitoring" /> Heart-rate monitoring</label>
 				<br>
-				<label><input type="checkbox"  name="Wearabledevice_4_Wearabledevice_4_Sleep tracking" /> Sleep tracking</label>
+				<label><input type="checkbox"  name="Wearabledevice_4_Wearabledevice_4_Sleep_tracking" /> Sleep tracking</label>
 				<br>
-				<label><input type="checkbox"  name="Wearabledevice_4_Step tracking" /> Step tracking</label>
+				<label><input type="checkbox"  name="Wearabledevice_4_Step_tracking" /> Step tracking</label>
 				<br>
-				<label><input type="checkbox"  name="Wearabledevice_4_Stress tracking" /> Stress tracking</label>
+				<label><input type="checkbox"  name="Wearabledevice_4_Stress_tracking" /> Stress tracking</label>
 				<br>
-				<label><input type="checkbox"  name="Wearabledevice_4_Sports or physical activity tracking" /> Sports or physical activity tracking</label>
+				<label><input type="checkbox"  name="Wearabledevice_4_Sports_or_physical_activity_tracking" /> Sports or physical activity tracking</label>
 				<br>
-				<label><input type="checkbox"  name="Wearabledevice_4_Workout intensity" /> Workout intensity</label>
+				<label><input type="checkbox"  name="Wearabledevice_4_Workout_intensity" /> Workout intensity</label>
 				<br>
 				<label><input type="checkbox"  name="Wearabledevice_4_Other" />Other (please specify)</label>
 				<br>
@@ -765,6 +740,16 @@
 			}
 		})
 
+		$("#F_05__ID input[name=Employment_other]").on('click',function(){
+			var c=$("#F_05__ID input[name=Employment_other]").prop('checked');
+			if(c==true){
+				$('#F_05__ID input[name=Employment_other_specify]').prop('disabled',false);
+			}
+			else{
+				$('#F_05__ID input[name=Employment_other_specify]').val('');
+				$('#F_05__ID input[name=Employment_other_specify]').prop('disabled',true);
+			}
+		})
 
 		//--------------------------------------------------------
 		$('#F_05__ID input[name=mobile]').prop('disabled',true);
@@ -780,6 +765,54 @@
 			}
 		})
 		//--------------------------------------------------------
+		$("#Employment__ID input[type=checkbox]").on('click',function(){
+			var R=false
+			$("#Employment__ID input[type=checkbox]").each(function(){
+				if( $(this).prop('checked')==true ) R=true;
+			})
+			if(R==false){
+				$("#Employment__ID input[name=Employment_full_time]").prop('required',true);
+				$("#Employment__ID input[name=Employment_full_time]")[0].setCustomValidity("Please select at least one!");
+			}
+			else{
+				$("#Employment__ID input[name=Employment_full_time]").prop('required',false);
+				$("#Employment__ID input[name=Employment_full_time]")[0].setCustomValidity("");
+			}
+		})
+		$("#Employment__ID input[name=Employment_full_time]")[0].setCustomValidity("Please select at least one!");
+		//--------------------------------------------------------
+		$("#Wearabledevice_3__ID input[type=checkbox]").on('click',function(){
+			var R=false
+			$("#Wearabledevice_3__ID input[type=checkbox]").each(function(){
+				if( $(this).prop('checked')==true ) R=true;
+			})
+			if(R==false){
+				$("#Wearabledevice_3__ID input[name=Wearabledevice_3_Communication]").prop('required',true);
+				$("#Wearabledevice_3__ID input[name=Wearabledevice_3_Communication]")[0].setCustomValidity("Please select at least one!");
+			}
+			else{
+				$("#Wearabledevice_3__ID input[name=Wearabledevice_3_Communication]").prop('required',false);
+				$("#Wearabledevice_3__ID input[name=Wearabledevice_3_Communication]")[0].setCustomValidity("");
+			}
+		})
+		$("#Wearabledevice_3__ID input[name=Wearabledevice_3_Communication]")[0].setCustomValidity("Please select at least one!");
+		//--------------------------------------------------------
+		$("#Wearabledevice_4__ID input[type=checkbox]").on('click',function(){
+			var R=false
+			$("#Wearabledevice_4__ID input[type=checkbox]").each(function(){
+				if( $(this).prop('checked')==true ) R=true;
+			})
+			if(R==false){
+				$("#Wearabledevice_4__ID input[name=Wearabledevice_4_Breathing_or_relaxation_exercises]").prop('required',true);
+				$("#Wearabledevice_4__ID input[name=Wearabledevice_4_Breathing_or_relaxation_exercises]")[0].setCustomValidity("Please select at least one!");
+			}
+			else{
+				$("#Wearabledevice_4__ID input[name=Wearabledevice_4_Breathing_or_relaxation_exercises]").prop('required',false);
+				$("#Wearabledevice_4__ID input[name=Wearabledevice_4_Breathing_or_relaxation_exercises]")[0].setCustomValidity("");
+			}
+		})
+		$("#Wearabledevice_4__ID input[name=Wearabledevice_4_Breathing_or_relaxation_exercises]")[0].setCustomValidity("Please select at least one!");
+		//--------------------------------------------------------
 	}
 	page_sfix_app__ID();
     //------------------------------
@@ -788,6 +821,52 @@
         $.each(a, function () { record[this.name]=this.value || '';});
     }
     //------------------------------
+	/*
+	var page_sfix_app_check_checkbox_A=function(){
+		var R=false
+		$("#Employment__ID input[type=checkbox]").each(function(){
+			if( $(this).prop('checked')==true ) R=true;
+		})
+		if(R==false){
+			alert("Please select at least one from the question '4. What is your current employment status?'. ")
+		}
+		return R;
+	}
+	//------------------------------
+	var page_sfix_app_check_checkbox_B=function(){
+		var Q1=$("#F_05__ID input[name=Wearabledevice_1]:checked").val();
+		if( Q1!="Yes" ) return true;
+		var R=false
+		$("#Wearabledevice_3__ID input[type=checkbox]").each(function(){
+			if( $(this).prop('checked')==true ) R=true;
+		})
+		if(R==false){
+			alert("Please select at least one from the question '3. What do you use the wearable device for?'. ")
+		}
+		return R;
+	}
+	//------------------------------
+	var page_sfix_app_check_checkbox_C=function(){
+		var Q1=$("#F_05__ID input[name=Wearabledevice_1]:checked").val();
+		if( Q1!="Yes" ) return true;
+		var R=false
+		$("#Wearabledevice_4__ID input[type=checkbox]").each(function(){
+			if( $(this).prop('checked')==true ) R=true;
+		})
+		if(R==false){
+			alert("Please select at least one from the question '4. What features of the wearable device do you use?'. ")
+		}
+		return R;
+	}
+	//------------------------------
+	$("#test__ID").on('click',function(){
+		var R=page_sfix_app_check_checkbox_A();	if(R==false) return;
+			R=page_sfix_app_check_checkbox_B();	if(R==false) return;
+			R=page_sfix_app_check_checkbox_C();	if(R==false) return;
+			alert("OK!")
+	})
+	//------------------------------
+	*/
 </script>
 <style>
 	#D__ID{
