@@ -752,15 +752,15 @@
 
 		//--------------------------------------------------------
 		$('#F_05__ID input[name=mobile]').prop('disabled',true);
-		$('#F_05__ID input[name=email]').prop('disabled',true);
+		//$('#F_05__ID input[name=email]').prop('disabled',true);
 		$("#F_05__ID input[name=draw]").on('click',function(){
 			if($(this).val()=='Yes'){
 				$('#F_05__ID input[name=mobile]').prop('disabled',false);
-				$('#F_05__ID input[name=email]').prop('disabled',false);
+				//$('#F_05__ID input[name=email]').prop('disabled',false);
 			}
 			else{
 				$('#F_05__ID input[name=mobile]').prop('disabled',true);
-				$('#F_05__ID input[name=email]').prop('disabled',true);
+				//$('#F_05__ID input[name=email]').prop('disabled',true);
 			}
 		})
 		//--------------------------------------------------------
